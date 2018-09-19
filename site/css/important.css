@@ -1,0 +1,36 @@
+.simulator-chart {
+  padding-top: 80px !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+.number-field {
+  text-align: left !important;
+  border: 1px solid #e6e6e6 !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  border-radius: 5px !important;
+  line-height: 40px !important;
+  height: 40px !important;
+  padding: 0 15px !important;
+  outline: none !important;
+}
+
+.white-hover:hover {
+  color: white !important;
+}
+
+.help_subclass_img {
+  left: 80px !important;
+  top: 210px !important;
+}
+
+.help_tariff_modality_img {
+  left: 80px !important;
+  top: 300px !important;
+}
+
+.help_monthly_consumption_img {
+  left: 80px !important;
+  top: 380px !important;
+}

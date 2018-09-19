@@ -1,0 +1,60 @@
+.welcome-label {
+  color: white !important;
+}
+
+.login-background {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../../site/pic/slider/main/slide-2.jpg);
+}
+
+.login-label {
+  font-size: 3rem !important;
+}
+
+.form-control-feedback {
+  color: #e74c3c !important;
+}
+
+.top-menu-arrow-down {
+  font-size:12px;
+}
+
+.top-menu-arrow-down:hover {
+  color: #34495e;
+}
+
+code {
+  background: #dfe6e9 !important;
+  color: #34495e !important;
+}
+
+div.box{
+  max-height: 400px;
+  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.m-header{
+  /* background-color: #f1f2f6 !important; */
+  background-color: white !important;
+}
+
+@media (min-width: 767px) {
+  .modal-size-60 {
+    width:60% !important; max-width: 60% !important;
+  }
+}
+
+
+
+/* input[readonly]
+{
+    background-color: #f4f5f8 !important;
+    cursor: not-allowed !important;
+}
+
+input[readonly="readonly"]
+{
+    background-color: #f4f5f8 !important;
+    cursor: not-allowed !important;
+} */
