@@ -235,15 +235,15 @@
                  $("#div_plans_edit").append('<div class="alert m-alert m-alert--default" role="alert"><a href="#" class="m-link" data-id="'+plan.planId+'" data-discount-id="'+plan.discountId+'" data-duration="'+plan.planDuration+'" data-name="'+plan.planName+'"><code>'+plan.planId+". "+plan.planName+'</code></a></div>');
                });
 
-               $.each(response["discounts"], function(i, discount){
-                 $("#plan_discount_create").append($("<option />").val(this.discountId).text(this.discountName));
-                 $("#plan_discount_edit").append($("<option />").val(this.discountId).text(this.discountName));
-               });
-
              }else{
                $("#div_plans_created").append('<div class="alert m-alert m-alert--default" role="alert"><code> Nenhum plano cadastrado</code></div>');
                $("#div_plans_edit").append('<div class="alert m-alert m-alert--default" role="alert"><code> Nenhum plano cadastrado</code></div>');
              }
+
+             $.each(response["discounts"], function(i, discount){
+               $("#plan_discount_create").append($("<option />").val(this.discountId).text(this.discountName));
+               $("#plan_discount_edit").append($("<option />").val(this.discountId).text(this.discountName));
+             });
 
            }else if(response["status"] == 2){
              //status error

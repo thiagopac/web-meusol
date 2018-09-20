@@ -1,5 +1,5 @@
 <div class="modal fade" id="modal_support_edit" tabindex="-1" role="dialog" aria-hidden="true">
-   <div class="modal-dialog modal-lg" role="document">
+   <div class="modal-dialog modal-lg modal-size-60" role="document">
       <div class="modal-content">
          <div class="modal-header">
             <h5 class="modal-title settings-window">
@@ -53,13 +53,13 @@
                        <label class="form-control-label">
                        Mensagem:
                        </label>
-                       <textarea placeholder="Escolha um registro ao lado" class="form-control" id="support_message_edit" ></textarea>
+                       <textarea placeholder="Escolha um registro ao lado" rows="5" class="form-control" id="support_message_edit" ></textarea>
                      </div>
                      <div class="form-group">
                        <label class="form-control-label">
                        Solução:
                        </label>
-                       <textarea placeholder="Escolha um registro ao lado" class="form-control" id="support_solution_edit" ></textarea>
+                       <textarea placeholder="Escolha um registro ao lado" rows="5" class="form-control" id="support_solution_edit" ></textarea>
                      </div>
                      <div class="form-group">
                         <label class="form-control-label">
@@ -183,8 +183,28 @@
              if (response["supports"].length > 0) {
 
                $.each(response["supports"], function(i, support){
+
                  var solved = support.supportSolved == 0 ? "Não-resolvido" : "Resolvido";
-                 $("#div_supports_edit").append('<div class="alert m-alert m-alert--default" role="alert"><a href="#" class="m-link" data-id="'+support.supportId+'" data-subject-id="'+support.supportSubjectId+'" data-message="'+support.supportMessage+'" data-company-id="'+support.companyId+'" data-company-name="'+support.companyName+'" data-date="'+support.supportDate+'" data-read="'+support.supportRead+'" data-solution="'+support.supportSolution+'" data-solved="'+support.supportSolved+'" data-urgency="'+support.supportUrgency+'"><code>'+support.supportId+'. '+support.companyName+' <small>('+solved+')</small></code></a></div>');
+                 var urgency = "";
+
+                 switch(support.supportUrgency) {
+                      case 0:
+                          urgency = '<span class="m-badge m-badge--success m-badge--wide ">Baixo</span>';
+                          break;
+                      case 1:
+                          urgency = '<span class="m-badge m-badge--info m-badge--wide ">Normal</span>';
+                          break;
+                      case 2:
+                          urgency = '<span class="m-badge m-badge--warning m-badge--wide ">Alto</span>';
+                          break;
+                      case 3:
+                          urgency = '<span class="m-badge m-badge--danger m-badge--wide ">Urgente</span>'
+                          break;
+                      default:
+                          urgency = '<span class="m-badge m-badge--metal m-badge--wide ">N/A</span>'
+                  }
+
+                 $("#div_supports_edit").append('<div class="alert m-alert m-alert--default" role="alert"><a href="#" class="m-link" data-id="'+support.supportId+'" data-subject-id="'+support.supportSubjectId+'" data-message="'+support.supportMessage+'" data-company-id="'+support.companyId+'" data-company-name="'+support.companyName+'" data-date="'+support.supportDate+'" data-read="'+support.supportRead+'" data-solution="'+support.supportSolution+'" data-solved="'+support.supportSolved+'" data-urgency="'+support.supportUrgency+'"><code>'+support.supportId+'. '+support.companyName+' <small>('+solved+')</small></code> '+urgency+'</a></div>');
                });
 
                $.each(response["supportSubjects"], function(i, discount){

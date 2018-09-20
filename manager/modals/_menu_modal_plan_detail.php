@@ -223,15 +223,15 @@
                  $("#div_plan_details_edit").append('<div class="alert m-alert m-alert--default" role="alert"><a href="#" class="m-link" data-id="'+planDetail.planDetailId+'" data-description="'+planDetail.planDetailDescription+'" data-plan-id="'+planDetail.planId+'"><code>'+planDetail.planDetailId+". "+planDetail.planDetailDescription+' <small>('+planDetail.planName+')</small></code></a></div>');
                });
 
-               $.each(response["plans"], function(i, plan){
-                 $("#plan_detail_plan_create").append($("<option />").val(this.planId).text(this.planName));
-                 $("#plan_detail_plan_edit").append($("<option />").val(this.planId).text(this.planName));
-               });
-
              }else{
                $("#div_plan_details_created").append('<div class="alert m-alert m-alert--default" role="alert"><code> Nenhum item cadastrado</code></div>');
                $("#div_plan_details_edit").append('<div class="alert m-alert m-alert--default" role="alert"><code> Nenhum item cadastrado</code></div>');
              }
+
+             $.each(response["plans"], function(i, plan){
+               $("#plan_detail_plan_create").append($("<option />").val(this.planId).text(this.planName));
+               $("#plan_detail_plan_edit").append($("<option />").val(this.planId).text(this.planName));
+             });
 
            }else if(response["status"] == 2){
              //status error

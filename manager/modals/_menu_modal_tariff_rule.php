@@ -256,26 +256,26 @@
                  $("#div_tariff_rules_edit").append('<div class="alert m-alert m-alert--default" role="alert"><a href="#" class="m-link" data-id="'+tariffRule.tariffRuleId+'" data-subclass-id="'+tariffRule.subclassId+'" data-tariff-modality-id="'+tariffRule.tariffModalityId+'" data-tariff-id="'+tariffRule.tariffId+'"><code>'+tariffRule.tariffRuleId+". "+tariffRule.subclassName+'</code> + <code>'+tariffRule.tariffModalityName+'</code> = <code>'+tariffRule.tariffValue+'</code></a></div>');
                });
 
-               $.each(response["subclasses"], function(i, subclass){
-                 $("#tariff_rule_subclass_create").append($("<option />").val(this.subclassId).text(this.subclassName));
-                 $("#tariff_rule_subclass_edit").append($("<option />").val(this.subclassId).text(this.subclassName));
-               });
-
-               $.each(response["tariffModalities"], function(i, tariffModality){
-
-                 $("#tariff_rule_tariff_modality_create").append($("<option />").val(this.tariffModalityId).text(this.tariffModalityName));
-                 $("#tariff_rule_tariff_modality_edit").append($("<option />").val(this.tariffModalityId).text(this.tariffModalityName));
-               });
-
-               $.each(response["tariffs"], function(i, tariff){
-                 $("#tariff_rule_tariff_create").append($("<option />").val(this.tariffId).text(this.tariffValue));
-                 $("#tariff_rule_tariff_edit").append($("<option />").val(this.tariffId).text(this.tariffValue));
-               });
-
              }else{
                $("#div_tariff_rules_created").append('<div class="alert m-alert m-alert--default" role="alert"><code> Nenhuma regra tarifária cadastrada</code></div>');
                $("#div_tariff_rules_edit").append('<div class="alert m-alert m-alert--default" role="alert"><code> Nenhuma regra tarifária cadastrada</code></div>');
              }
+
+             $.each(response["subclasses"], function(i, subclass){
+               $("#tariff_rule_subclass_create").append($("<option />").val(this.subclassId).text(this.subclassName));
+               $("#tariff_rule_subclass_edit").append($("<option />").val(this.subclassId).text(this.subclassName));
+             });
+
+             $.each(response["tariffModalities"], function(i, tariffModality){
+
+               $("#tariff_rule_tariff_modality_create").append($("<option />").val(this.tariffModalityId).text(this.tariffModalityName));
+               $("#tariff_rule_tariff_modality_edit").append($("<option />").val(this.tariffModalityId).text(this.tariffModalityName));
+             });
+
+             $.each(response["tariffs"], function(i, tariff){
+               $("#tariff_rule_tariff_create").append($("<option />").val(this.tariffId).text(this.tariffValue));
+               $("#tariff_rule_tariff_edit").append($("<option />").val(this.tariffId).text(this.tariffValue));
+             });
 
            }else if(response["status"] == 2){
              //status error

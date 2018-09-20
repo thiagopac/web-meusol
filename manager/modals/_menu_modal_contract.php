@@ -374,25 +374,25 @@
 
                });
 
-               $.each(response["companies"], function(i, company){
-                 $("#contract_company_create").append($("<option />").val(this.companyId).text(this.companyName));
-                 $("#contract_company_edit").append($("<option />").val(this.companyId).text(this.companyName));
-               });
-
-               $.each(response["plans"], function(i, plan){
-                 $("#contract_plan_create").append($("<option />").val(this.planId).text(this.planName));
-                 $("#contract_plan_edit").append($("<option />").val(this.planId).text(this.planName));
-               });
-
-               $.each(response["tariffRules"], function(i, tariffRule){
-                 $("#contract_tariff_rule_create").append($("<option />").val(this.tariffRuleId).text(this.tariffRuleId +". "+ this.subclassName +' + '+ this.tariffModalityName +" = "+ this.tariffValue));
-                 $("#contract_tariff_rule_edit").append($("<option />").val(this.tariffRuleId).text(this.tariffRuleId +". "+ this.subclassName +' + '+ this.tariffModalityName +" = "+ this.tariffValue));
-               });
-
              }else{
                $("#div_contracts_created").append('<div class="alert m-alert m-alert--default" role="alert"><code> Nenhum contrato cadastrado</code></div>');
                $("#div_contracts_edit").append('<div class="alert m-alert m-alert--default" role="alert"><code> Nenhum contrato cadastrado</code></div>');
              }
+
+             $.each(response["companies"], function(i, company){
+               $("#contract_company_create").append($("<option />").val(this.companyId).text(this.companyName));
+               $("#contract_company_edit").append($("<option />").val(this.companyId).text(this.companyName));
+             });
+
+             $.each(response["plans"], function(i, plan){
+               $("#contract_plan_create").append($("<option />").val(this.planId).text(this.planName));
+               $("#contract_plan_edit").append($("<option />").val(this.planId).text(this.planName));
+             });
+
+             $.each(response["tariffRules"], function(i, tariffRule){
+               $("#contract_tariff_rule_create").append($("<option />").val(this.tariffRuleId).text(this.tariffRuleId +". "+ this.subclassName +' + '+ this.tariffModalityName +" = "+ this.tariffValue));
+               $("#contract_tariff_rule_edit").append($("<option />").val(this.tariffRuleId).text(this.tariffRuleId +". "+ this.subclassName +' + '+ this.tariffModalityName +" = "+ this.tariffValue));
+             });
 
            }else if(response["status"] == 2){
              //status error

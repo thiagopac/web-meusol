@@ -10,6 +10,10 @@ function retrieveSupports($companyId){
 												JOIN COMPANY AS CO ON CO.ID = SU.COMPANY_ID
                         WHERE SU.COMPANY_ID = :companyId";
 
+	$sqlListSupportSubjects = "SELECT SS.ID AS supportSubjectId, SS.NAME AS supportSubjectName, SS.DESCRIPTION AS supportSubjectDescription
+															FROM SUPPORT_SUBJECT AS SS
+															WHERE 1";
+
 	try{
 			$conn = getConn();
 
@@ -19,12 +23,18 @@ function retrieveSupports($companyId){
 			$stmt->execute();
       $supports = $stmt->fetchAll(PDO::FETCH_OBJ);
 
+			//SQL AND BIND
+			$stmt = $conn->prepare($sqlListSupportSubjects);
+			$stmt->execute();
+			$supportSubjects = $stmt->fetchAll(PDO::FETCH_OBJ);
+
       //RESPONSE
       $response = new stdClass();
       $response->status = 1;
       $response->statusMessage = "Dados recuperados com sucesso.";
 
       $response->supports = $supports;
+			$response->supportSubjects = $supportSubjects;
 
       //OUTPUT
 			echo json_encode($response, JSON_NUMERIC_CHECK);

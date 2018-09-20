@@ -94,14 +94,14 @@ require './routes/retrieveReferralRegistries.php';
 
 //Support
 require './routes/listSupports.php';
-// require './routes/createSupport.php';
+require './routes/createSupport.php';
 require './routes/editSupport.php';
+require './routes/retrieveSupports.php';
 
 //Support Subjects
 require './routes/listSupportSubjects.php';
 require './routes/createSupportSubject.php';
 require './routes/editSupportSubject.php';
-require './routes/retrieveSupports.php';
 
 //TIMEZONE
 date_default_timezone_set("America/Sao_Paulo");
@@ -169,7 +169,7 @@ $app->post('/create-company','createCompany');
 $app->post('/create-contract','createContract');
 $app->post('/create-contact','createContact');
 $app->post('/create-plan-detail','createPlanDetail');
-// $app->post('/create-support','createSupport');
+$app->post('/create-support','createSupport');
 $app->post('/create-support-subject','createSupportSubject');
 
 //PUT ROUTES

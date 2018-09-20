@@ -118,6 +118,15 @@ function validateCnpj(cnpj) {
     return true;
 }
 
+function clipText(string, limit) {
+  var dots = "...";
+
+  if(string.length > limit){
+    string = string.substring(0,limit) + dots;
+  }
+    return string;
+}
+
 function MD5(e) {
     function h(a, b) {
         var c, d, e, f, g;
