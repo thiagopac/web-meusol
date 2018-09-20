@@ -51,11 +51,14 @@
                               </span>
                             </div>
                             <select class="form-control m-input m-input--square" id="support_subject_select">
-                              <option value="">Selecione...</option>
+                              <option value="" data-description="" data-icon="la la-info-circle">Selecione...</option>
     											</select>
                           </div>
 													<span class="m-form__help">
-														Selecione a área de suporte correspondente com o seu chamado
+                            <label>
+                              <i class="text-metal" id="icon_support_subject_description"></i>
+														<span class="text-metal" id="label_support_subject_description" style="vertical-align:top"></span>
+													</label>
 													</span>
 												</div>
 											</div>
@@ -79,7 +82,7 @@
                           </select>
                           </div>
 													<span class="m-form__help">
-														Selecione a urgência de seu chamado. Prioridades altas e urgentes remetem a problemas quem impossibilitam o uso da plataforma.
+														Selecione a urgência de seu chamado. Prioridades altas e urgentes remetem a problemas que impossibilitam o uso da plataforma.
 													</span>
 												</div>
 											</div>
@@ -208,7 +211,7 @@
                  var solved = support.supportSolved == 1 ? "Resolvido" : "Não-resolvido";
                  var message = clipText(support.supportMessage, 100);
 
-                 $("#div_supports").append('<div class="m-list-timeline__item"><span class="m-list-timeline__badge"></span><span class="m-list-timeline__text"><span class="m-badge m-badge--info m-badge--wide m-badge--rounded"> '+support.supportSubjectName+' </span> '+message+' <mark> <small>('+solved+')</small> </mark></span><span class="m-list-timeline__time">'+convertDateYMDtoDMY(support.supportDate)+'</span></div>');
+                 $("#div_supports").append('<div class="m-list-timeline__item"><span class="m-list-timeline__badge"></span><span class="m-list-timeline__text"><span class="m-badge m-badge--primary m-badge--wide m-badge--rounded"> '+support.supportSubjectName+' </span> '+message+' <mark> <small>('+solved+')</small> </mark></span><span class="m-list-timeline__time">'+convertDateYMDtoDMY(support.supportDate)+'</span></div>');
                });
 
              }else{
@@ -216,7 +219,7 @@
              }
 
              $.each(response["supportSubjects"], function(i, discount){
-               $("#support_subject_select").append($("<option />").val(this.supportSubjectId).text(this.supportSubjectName));
+               $("#support_subject_select").append($("<option />").val(this.supportSubjectId).text(this.supportSubjectName).attr("data-description", this.supportSubjectDescription).attr("data-icon", "la la-info-circle"));
              });
 
            }else if(response["status"] == 2){
@@ -296,6 +299,17 @@
 
        $('#form_create_support').trigger("reset");
        event.preventDefault();
+
+     });
+
+     $('#support_subject_select').delegate(null,'change', function() {
+       $('#label_support_subject_description').html($(this).find("option:selected").data("description"));
+       $('#icon_support_subject_description').addClass($(this).find("option:selected").data("icon"));
+
+       if ($(this).find("option:selected").data("description") == "") {
+        $('#icon_support_subject_description').removeClass("la la-info-circle");
+        console.log("oi");
+       }
 
      });
 

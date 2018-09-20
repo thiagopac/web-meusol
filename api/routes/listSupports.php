@@ -6,7 +6,8 @@ function listSupports(){
 														 SU.DIN AS supportDate, SU.READ AS supportRead, SU.SOLUTION AS supportSolution, SU.SOLVED AS supportSolved, SU.URGENCY AS supportUrgency
                         FROM SUPPORT AS SU
 												JOIN COMPANY AS CO ON CO.ID = SU.COMPANY_ID
-                        WHERE 1";
+                        WHERE 1
+												ORDER BY SU.ID DESC";
 
 	$sqlListSupportSubjects = "SELECT SS.ID AS supportSubjectId, SS.NAME AS supportSubjectName, SS.DESCRIPTION AS supportSubjectDescription
                         			FROM SUPPORT_SUBJECT AS SS
