@@ -3,7 +3,7 @@
 }
 
 .login-background {
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../../site/pic/slider/main/slide-2.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../../site/pic/slider/main/slide-2.jpg) !important;
 }
 
 .login-label {
@@ -15,11 +15,11 @@
 }
 
 .top-menu-arrow-down {
-  font-size:12px;
+  font-size:12px !important;
 }
 
 .top-menu-arrow-down:hover {
-  color: #34495e;
+  color: #34495e !important;
 }
 
 code {
@@ -28,18 +28,18 @@ code {
 }
 
 div.box{
-  max-height: 400px;
-  overflow: scroll;
-  overflow-y: auto;
-  overflow-x: hidden;
+  max-height: 400px !important;
+  overflow: scroll !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
 }
 
 .m-header{
   /* background-color: #f1f2f6 !important; */
-  background: #43516F!important;
-  -webkit-box-shadow: 0 4px 8px 0 #bbb;
-   -moz-box-shadow: 0 4px 8px 0 #bbb;
-        box-shadow: 0 4px 8px 0 #bbb;
+  background: #43516F !important;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3) !important;
+   -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3) !important;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3) !important;
 }
 
 @media (min-width: 767px) {

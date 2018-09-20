@@ -49,7 +49,7 @@
               <li class="m-nav__item m-dropdown m-dropdown--medium m-dropdown--arrow  m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light" m-dropdown-toggle="click">
                 <a href="#" class="m-nav__link m-dropdown__toggle">
                   <span class="m-topbar__username m--hidden-mobile">
-                    <i class="m-menu__hor-arrow la la-angle-down top-menu-arrow-down"></i>&nbsp;
+                    <i class="m-menu__hor-arrow fa fa-chevron-down" style="vertical-align: middle"></i>&nbsp;
                     <!-- <span id="labelUserEmail">Email</span> -->
                   </span>
                   <span class="m-topbar__userpic">
