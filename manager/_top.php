@@ -37,7 +37,7 @@
       </div>
       <div class="m-stack__item m-stack__item--middle m-stack__item--center">
         <!-- BEGIN: Brand -->
-        <img alt="" src="assets/app/media/img/logos/logo-small.png"/>
+        <img alt="" src="assets/app/media/img/logos/logo-l.png"/>
         <!-- END: Brand -->
       </div>
       <div class="m-stack__item m-stack__item--right">
@@ -50,7 +50,7 @@
                 <a href="#" class="m-nav__link m-dropdown__toggle">
                   <span class="m-topbar__username m--hidden-mobile">
                     <i class="m-menu__hor-arrow la la-angle-down top-menu-arrow-down"></i>&nbsp;
-                    <span id="labelUserEmail">Email</span>
+                    <!-- <span id="labelUserEmail">Email</span> -->
                   </span>
                   <span class="m-topbar__userpic">
                     <img src="assets/app/media/img/users/avatar-placeholder.jpg" class="m--img-rounded m--marginless m--img-centered" alt=""/>

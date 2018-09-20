@@ -7,9 +7,9 @@
        <li class="m-menu__item  m-menu__item--active  m-menu__item--submenu m-menu__item--rel"  m-menu-submenu-toggle="click" aria-haspopup="true">
          <a  href="javascript:;" class="m-menu__link m-menu__toggle">
            <span class="m-menu__item-here"></span>
-           <i class="m-menu__link-icon flaticon-more-1"></i>
+           <i class="m-menu__link-icon flaticon-squares text-white"></i>
            <span class="m-menu__link-text">
-             Configurações
+             <img style="margin-bottom: 2px !important;" alt="" src="assets/app/media/img/logos/menu.png"/>
            </span>
            <i class="m-menu__hor-arrow la la-angle-down"></i>
            <i class="m-menu__ver-arrow la la-angle-right"></i>

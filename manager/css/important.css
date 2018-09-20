@@ -36,7 +36,10 @@ div.box{
 
 .m-header{
   /* background-color: #f1f2f6 !important; */
-  background-color: white !important;
+  background: #43516F!important;
+  -webkit-box-shadow: 0 4px 8px 0 #bbb;
+   -moz-box-shadow: 0 4px 8px 0 #bbb;
+        box-shadow: 0 4px 8px 0 #bbb;
 }
 
 @media (min-width: 767px) {
@@ -45,16 +48,6 @@ div.box{
   }
 }
 
-
-
-/* input[readonly]
-{
-    background-color: #f4f5f8 !important;
-    cursor: not-allowed !important;
+.m-topbar .m-topbar__nav.m-nav>.m-nav__item.m-dropdown--open>.m-nav__link .m-topbar__username, .m-topbar .m-topbar__nav.m-nav>.m-nav__item.m-nav__link-icon--active>.m-nav__link .m-topbar__username, .m-topbar .m-topbar__nav.m-nav>.m-nav__item:hover>.m-nav__link .m-topbar__username {
+  color: white !important;
 }
-
-input[readonly="readonly"]
-{
-    background-color: #f4f5f8 !important;
-    cursor: not-allowed !important;
-} */
