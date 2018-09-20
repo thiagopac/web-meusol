@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="8a69d984-d97b-4e46-8551-276214dfa536" name="FTP" url="http://meusol.net">
+      <webServer id="794d8a7d-1032-4960-9a13-90321b407d3c" name="FTP" url="http://meusol.net">
         <fileTransfer host="meusol.net" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
@@ -10,7 +10,7 @@
           <option name="port" value="21" />
         </fileTransfer>
       </webServer>
-      <webServer id="6964481e-5b63-431b-b708-6ce5c3ec49b7" name="LOCALHOST" url="http://localhost/meusol">
+      <webServer id="c2a33d56-1518-47d2-bdb9-d2359fbc2c95" name="LOCALHOST" url="http://localhost/meusol">
         <fileTransfer port="0" accessType="LOCAL" />
       </webServer>
     </option>

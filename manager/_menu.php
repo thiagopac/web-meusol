@@ -9,7 +9,7 @@
            </span>
            <i class="m-menu__hor-arrow la la-angle-down"></i>
            <i class="m-menu__ver-arrow la la-angle-right"></i>
-         </a>aaa
+         </a>
          <div class="m-menu__submenu m-menu__submenu--classic  m-menu__submenu--left">
            <span class="m-menu__arrow m-menu__arrow--adjust"></span>
            <ul class="m-menu__subnav">
